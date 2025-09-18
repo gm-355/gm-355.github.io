@@ -39,8 +39,16 @@
                 <p>
                     The percent sign is a <strong>relative unit</strong>. It calculates the value based on the size of the parent element. For example, if I set width: 50%, the browser gives the element half the width of its container. But this changes depending on the property. For width or height, the reference is the parent. For padding or margin, it usually uses the element’s own width. So you have to test it and see how the browser reacts in each case.
                 </p>
-
             </li>
+            <li><strong>em and rem</strong>
+                <p>
+                    These are both relative to font size. <i>em</i> is based on the font size of the parent element. That means it can stack if you have nested elements, which sometimes makes things harder to control. <i>rem</i> is based on the root font size, usually the <html> tag. It’s more stable and predictable, so using rem is appropriate for consistent spacing or font sizes across the page.
+                </p>
+            </li>
+            <li><strong>px</strong>
+                <p>
+                    Pixels are an <strong>absolute unit</strong>. They represent a fixed size on the screen. One pixel is one dot on the screen. This means that if you set something to 100px, it will always be 100 pixels wide, regardless of the screen size or resolution. However, with high-DPI screens, a pixel might not correspond to a physical dot, so it can look different on various devices.
+                </p>
         </ul>
     </div>
 
