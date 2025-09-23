@@ -99,6 +99,11 @@ p.callout {
 #secondLayout #para10 { grid-area: p10; }
 #secondLayout #para11 { grid-area: p11; }
 
+#secondLayout #callout1 { grid-area: c1; }
+#secondLayout #callout2 { grid-area: c2; }
+#secondLayout #callout3 { grid-area: c3; }
+#secondLayout #callout4 { grid-area: c4; }
+
 #secondLayout p { width: 100%; }
 
 #secondLayout section h1 { padding-top: 70vh; }
