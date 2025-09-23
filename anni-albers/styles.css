@@ -67,6 +67,8 @@ p.callout {
     margin-left: calc(100% * 2 / 6);
 }
 
+/* CSS for index2 */
+
 #secondLayout main {
     display: grid;
     grid-template-columns: repeat(6, calc(100% / 6));
@@ -86,24 +88,62 @@ p.callout {
         ". . p11 p11 p11 .";
 }
 
-#secondLayout #titleRow { grid-area: title; }
-#secondLayout #para1  { grid-area: p1; }
-#secondLayout #para2  { grid-area: p2; }
-#secondLayout #para3  { grid-area: p3; }
-#secondLayout #para4  { grid-area: p4; }
-#secondLayout #para5  { grid-area: p5; }
-#secondLayout #para6  { grid-area: p6; }
-#secondLayout #para7  { grid-area: p7; }
-#secondLayout #para8  { grid-area: p8; }
-#secondLayout #para9  { grid-area: p9; }
-#secondLayout #para10 { grid-area: p10; }
-#secondLayout #para11 { grid-area: p11; }
+#secondLayout #titleRow {
+    grid-area: title;
+}
 
-#secondLayout #callout1 { grid-area: c1; }
-#secondLayout #callout2 { grid-area: c2; }
-#secondLayout #callout3 { grid-area: c3; }
-#secondLayout #callout4 { grid-area: c4; }
+#secondLayout #para1 {
+    grid-area: p1;
+}
 
-#secondLayout p { width: 100%; }
+#secondLayout #para2 {
+    grid-area: p2;
+}
 
-#secondLayout section h1 { padding-top: 70vh; }
+#secondLayout #para3 {
+    grid-area: p3;
+}
+
+#secondLayout #para4 {
+    grid-area: p4;
+}
+
+#secondLayout #para5 {
+    grid-area: p5;
+}
+
+#secondLayout #para6 {
+    grid-area: p6;
+}
+
+#secondLayout #para7 {
+    grid-area: p7;
+}
+
+#secondLayout #para8 {
+    grid-area: p8;
+}
+
+#secondLayout #para9 {
+    grid-area: p9;
+}
+
+#secondLayout #para10 {
+    grid-area: p10;
+}
+
+#secondLayout #para11 {
+    grid-area: p11;
+}
+
+#secondLayout p {
+    width: 100%;
+}
+
+#secondLayout #callout1 {
+    padding-left: 0;
+}
+
+#secondLayout section h1 {
+    padding-top: 70vh;
+}
