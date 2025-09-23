@@ -64,4 +64,5 @@ p.callout {
 #about h3 {
     font-size: 1.25rem;
     margin-top: 2.5rem;
+    margin-left: calc(100% * 2 / 6);
 }
