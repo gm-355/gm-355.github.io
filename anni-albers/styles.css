@@ -68,10 +68,11 @@ p.callout {
 }
 
 /* CSS for index2 */
+
 #secondLayout main {
     display: grid;
     grid-template-columns: repeat(6, calc(100% / 6));
-    grid-template-rows: 100vh repeat(11, auto);
+    grid-template-rows: 100vh repeat(14, auto);
     grid-template-areas:
         "title title title title title title"
         ". p1 p1 p1 . ."
@@ -84,7 +85,10 @@ p.callout {
         ". p8 p8 p8 . ."
         "p9 p9 p9 c4 c4 c4"
         ". p10 p10 p10 . ."
-        ". . p11 p11 p11 .";
+        ". . p11 p11 p11 ."
+        "aboutT aboutT aboutT aboutT aboutT aboutT"
+        ". a1 a1 a1 . ."
+        ". a2 a2 a2 . .";
 }
 
 #secondLayout #titleRow {
@@ -151,13 +155,26 @@ p.callout {
     grid-area: c4;
 }
 
+#secondLayout #aboutTitle {
+    grid-area: aboutT;
+}
+
+#secondLayout #about1 {
+    grid-area: a1;
+}
+
+#secondLayout #about2 {
+    grid-area: a2;
+}
+
 #secondLayout p {
     width: 100%;
 }
 
-#secondLayout .callout {
-    float: none;
-    text-align: left;
+#secondLayout #callout1,
+#secondLayout #callout2,
+#secondLayout #callout3,
+#secondLayout #callout4 {
     padding-left: 0;
 }
 
