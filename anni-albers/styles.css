@@ -66,3 +66,41 @@ p.callout {
     margin-top: 2.5rem;
     margin-left: calc(100% * 2 / 6);
 }
+
+/* *************************************************** */
+/* CSS for index2                                      */
+/* *************************************************** */
+
+/* inherit the baseline main code, above, and add to it */
+#secondLayout main {
+    display: grid;
+    grid-template-columns: repeat(6, calc(100% / 6) );
+    grid-template-rows: 100vh repeat(4, auto);
+    grid-template-areas:
+        'title title title title title title'
+        '. p1 p1 p1 . .'
+        'p2 p2 p2 c1 c1 c1'
+        '. p3 p3 p3 . .'
+        '. . p4 p4 p4 .';
+}
+
+/* assigning grid area names to DOM elements */
+#secondLayout #titleRow { grid-area: title; }
+#secondLayout #para1 { grid-area: p1; }
+#secondLayout #para2 { grid-area: p2; }
+#secondLayout #para3 { grid-area: p3; }
+#secondLayout #para4 { grid-area: p4; }
+#secondLayout #callout1 { grid-area: c1; }
+
+/* override the baseline p styles from above */
+#secondLayout p {
+    width: 100%;
+}
+
+#secondLayout #callout1 {
+    padding-left: 0;
+}
+
+#secondLayout section h1 {
+    padding-top: 70vh;
+}
