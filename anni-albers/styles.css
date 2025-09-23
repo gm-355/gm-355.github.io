@@ -26,3 +26,7 @@ p.callout {
     line-height: 2.2rem;
     font-style: italic;
 }
+
+#row1 p {
+    margin-left: calc(100% * 1 / 6);
+}
