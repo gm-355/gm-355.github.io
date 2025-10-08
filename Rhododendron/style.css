@@ -1,6 +1,6 @@
 /*mobile-first design for Pacific Rhododendron layout */
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@ header {
     height: 100vh;
 }
 
-#rhodieTitle h1{
+#rhodieTitle h1 {
     position: absolute;
     bottom: 0;
     left: 0;
