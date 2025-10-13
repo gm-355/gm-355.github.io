@@ -39,7 +39,6 @@ header {
     width: calc(100vw - 2em);
 }
 
-
 /* MOBILE BASELINE LAYOUT */
 
 main {
@@ -65,6 +64,7 @@ img {
     border-radius: 5px;
 }
 
+/* LANDSCAPE LAYOUT */
 
 @media screen and (orientation: landscape) {
 
@@ -81,7 +81,16 @@ img {
     #rhodieTitle h1 {
         width: 45vw;
     }
+}
 
-    /* PUT THE REST OF THE DESKTOP LAYOUT HERE */
-    
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    main section:last-of-type {
+        grid-column: 1 / -1;
+    }
 }
