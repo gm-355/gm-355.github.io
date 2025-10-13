@@ -40,7 +40,30 @@ header {
 }
 
 
-/* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
+/* MOBILE BASELINE LAYOUT */
+
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+}
+
+section {
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
 
 
 @media screen and (orientation: landscape) {
