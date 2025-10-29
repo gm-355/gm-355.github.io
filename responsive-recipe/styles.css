@@ -95,45 +95,60 @@ ul ul, ol ol {
 
 @media (min-width: 768px) {
 
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1100px;
+    margin: 40px auto;
     padding: 40px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
   }
 
+
   header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 40px;
-    text-align: left;
     margin-bottom: 40px;
   }
 
+  .header-left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   header h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
+    font-weight: 800;
     margin-bottom: 20px;
+    text-align: left;
   }
 
   header img {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
+    height: auto;
     border-radius: 6px;
+    margin-bottom: 30px;
   }
 
   .info {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 16px;
+    text-align: left;
+    padding-top: 40px;
   }
 
   .info div {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    font-size: 1rem;
+    width: 180px;
   }
 
   .info strong {
@@ -141,31 +156,29 @@ ul ul, ol ol {
   }
 
   main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
-  }
-
-  main section {
-    background-color: white;
+    gap: 40px;
+    max-width: 650px;
   }
 
   .ingredients, .preparation {
-    margin: 0;
+    width: 100%;
   }
 
   h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.6rem;
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   footer {
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
     font-size: 0.9rem;
-    color: #666;
+    color: #555;
   }
 }
