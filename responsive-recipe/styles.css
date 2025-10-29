@@ -95,7 +95,7 @@ ul ul, ol ol {
 
 @media (min-width: 768px) {
 
-  header {
+header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
