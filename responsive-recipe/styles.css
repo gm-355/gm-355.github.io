@@ -92,46 +92,39 @@ ul ul, ol ol {
 }
 
 /* ===== DESKTOP LAYOUT ===== */
+
 @media (min-width: 768px) {
 
-    body {
+header {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas:
-      "header info"
-      "main   main"
-      "footer footer";
-    column-gap: 40px;
-  }
-
-  header {
-    grid-area: header;
-    padding: 40px 60px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 2fr 1fr; 
+    align-items: start;
+    gap: 40px;
+    padding: 40px 60px;
   }
 
   header h1 {
+    grid-column: 1;
+    font-size: 2.8rem;
+    font-weight: 800;
     margin: 0 0 20px;
-    font-size: 3rem;
     text-align: left;
   }
 
   header img {
+    grid-column: 1;
     width: 100%;
-    max-width: 700px;  
+    max-width: 650px;
     height: auto;
-    margin: 0;          
     border-radius: 6px;
   }
-  
+
   .info {
-    grid-area: info;
-    align-self: start;
-    padding: 40px 60px 0 0;
+    grid-column: 2;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-self: center; 
     gap: 18px;
     text-align: left;
   }
@@ -144,20 +137,34 @@ ul ul, ol ol {
 
   main {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    padding: 0 60px 60px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
+    padding: 0 60px 60px;
+    text-align: left;
   }
 
-  main section {
-    margin: 0;
+  .ingredients, .preparation {
+    margin-bottom: 0;
   }
 
   h2 {
     font-size: 1.6rem;
     margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
   }
 
+  h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #555;
+  }
 }
