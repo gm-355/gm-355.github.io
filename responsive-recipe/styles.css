@@ -6,23 +6,25 @@ body {
   padding: 0;
   background-color: #fff;
   color: #333;
+  text-align: center;
 }
 
 header {
-  text-align: center;
   padding: 20px;
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
 header img {
-  width: 100%;
+  width: 85%; 
+  max-width: 320px;
   height: auto;
   border-radius: 6px;
-  margin: 20px 0;
+  margin: 0 auto 25px;
   display: block;
 }
 
@@ -30,21 +32,37 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin: 20px 0;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
 }
 
+/* cada linha do bloco */
 .info div {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
+/* negrito no título, normal no texto */
+.info strong {
+  font-weight: 700;
+}
+
+.info p {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ===== conteúdo principal ===== */
 main {
   padding: 0 20px;
 }
 
 .ingredients,
 .preparation {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 h2 {
