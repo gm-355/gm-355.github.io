@@ -94,39 +94,46 @@ ul ul, ol ol {
 /* ===== DESKTOP LAYOUT ===== */
 @media (min-width: 768px) {
 
-  body {
-    text-align: left;
-    margin: 0;
-    padding: 0;
+    body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "header info"
+      "main   main"
+      "footer footer";
+    column-gap: 40px;
   }
 
   header {
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
-    align-items: start;
-    gap: 20px;
-    padding: 40px 60px;
+    grid-area: header;
+    padding: 40px 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   header h1 {
-    font-size: 2.8rem;
-    font-weight: 800;
     margin: 0 0 20px;
+    font-size: 3rem;
+    text-align: left;
   }
 
   header img {
     width: 100%;
+    max-width: 700px;  
     height: auto;
-    max-width: 600px;
+    margin: 0;          
     border-radius: 6px;
   }
-
+  
   .info {
+    grid-area: info;
+    align-self: start;
+    padding: 40px 60px 0 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 18px;
-    margin-top: 20px;
+    text-align: left;
   }
 
   .info div {
@@ -134,7 +141,6 @@ ul ul, ol ol {
     justify-content: space-between;
     gap: 12px;
   }
-
 
   main {
     display: grid;
