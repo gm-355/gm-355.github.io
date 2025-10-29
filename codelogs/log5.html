@@ -44,19 +44,21 @@
             <ol>
                 <li>
                     <strong>What are the differences between presenting an image using an HTML tag (like &lt;img&gt;)
-                        and
-                        presenting it as the background of an HTML element (using the CSS property background-image)?
+                        and presenting it as the background of an HTML element (using the CSS property background-image)?
                         Think in terms of differences in code as well as differences in functionality and
                         layout.</strong>
-                    <p>...</p>
+                    <p> Using the &lt;img&gt; tag puts the image inside the HTML content. It affects the layout, can use
+                        <code>alt</code> for accessibility, and is important for SEO. 
+                        Using <code>background-image</code> is more for decoration, because it doesn’t affect the layout or structure, 
+                        has no alt text, and is used to make the design look good.</p>
                 </li>
 
                 <li>
                     <strong>Besides background-image, what other CSS properties affect the display of background images?
                         Describe at least two more CSS properties.</strong>
                     <ul>
-                        <li><u>background-size:</u> asdfasd</li>
-                        <li><u>background-repeat:</u> asdfadsfae</li>
+                        <li><u>background-size:</u>controls how big the image is, for example <code>cover</code> makes it fill the element and <code>contain</code> shows the full image without cutting it.</li>
+                        <li><u>background-repeat:</u>sets if the image repeats or not (for example <code>no-repeat</code> stops it from repeating).</li>
                     </ul>
                 </li>
 
