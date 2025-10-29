@@ -95,82 +95,77 @@ ul ul, ol ol {
 
 @media (min-width: 768px) {
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 60px;
-    padding: 40px 60px;
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #ddd;
   }
 
-  .header-left {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: 40px;
+    text-align: left;
+    margin-bottom: 40px;
   }
 
   header h1 {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.8rem;
     margin-bottom: 20px;
-    text-align: left;
   }
 
   header img {
     width: 100%;
-    max-width: 650px;
-    height: auto;
+    max-width: 600px;
     border-radius: 6px;
   }
 
   .info {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: start;
     gap: 16px;
-    text-align: left;
   }
 
   .info div {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .info strong {
+    font-weight: 700;
   }
 
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 60px 60px;
+    gap: 40px;
     text-align: left;
   }
 
-  main section:last-of-type {
-    grid-column: 1 / -1;
+  main section {
+    background-color: white;
+  }
+
+  .ingredients, .preparation {
+    margin: 0;
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
   }
 
-  h3 {
-    font-size: 1.1rem;
-    margin-top: 15px;
-  }
-
   footer {
+    margin-top: 40px;
     text-align: center;
-    padding: 20px;
     font-size: 0.9rem;
-    color: #555;
+    color: #666;
   }
 }
