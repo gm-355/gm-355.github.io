@@ -94,7 +94,7 @@ ul ul, ol ol {
 /* ===== DESKTOP LAYOUT ===== */
 
 @media (min-width: 768px) {
- body {
+body {
     max-width: 1100px;
     margin: 40px auto;
     padding: 40px 60px;
@@ -111,11 +111,11 @@ ul ul, ol ol {
   }
 
   .header-left {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 40px;
+    width: 100%;
   }
 
   header h1 {
@@ -123,7 +123,6 @@ ul ul, ol ol {
     font-weight: 800;
     margin-bottom: 20px;
     text-align: left;
-    grid-column: 1 / -1;
   }
 
   header img {
@@ -134,6 +133,7 @@ ul ul, ol ol {
   }
 
   .info {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,7 +155,8 @@ ul ul, ol ol {
     text-align: left;
   }
 
-  .ingredients, .preparation {
+  .ingredients,
+  .preparation {
     margin: 0;
   }
 
