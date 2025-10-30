@@ -93,4 +93,46 @@ img {
     main section:last-of-type {
         grid-column: 1 / -1;
     }
+
+#toggleDarkMode {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#toggleDarkMode:hover {
+    background-color: #555;
+}
+
+.darkMode {
+    background-color: #121212;
+    color: #e5e5e5;
+}
+
+.darkMode main {
+    background-color: #1c1c1c;
+}
+
+.darkMode h1,
+.darkMode h2 {
+    color: #f0f0f0;
+}
+
+.darkMode p {
+    color: #ccc;
+}
+
+.darkMode #rhodieTitle {
+    background-color: #000;
+}
+
+.darkMode button {
+    background-color: #e5e5e5;
+    color: #000;
+}
 }
