@@ -1,0 +1,96 @@
+/* mobile-first design for Pacific Rhododendron layout */
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+}
+
+#rhodiePicture {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Pacific-Rhododendron-1.jpeg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#rhodieTitle {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#rhodieTitle h1 {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    color: white;
+    font-size: 2.5em;
+    width: calc(100vw - 2em);
+}
+
+/* MOBILE BASELINE LAYOUT */
+
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+}
+
+section {
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* LANDSCAPE LAYOUT */
+
+@media screen and (orientation: landscape) {
+
+    #rhodiePicture {
+        width: 50vw;
+    }
+
+    #rhodieTitle {
+        width: 50vw;
+        left: 50vw;
+        background-color: #333;
+    }
+
+    #rhodieTitle h1 {
+        width: 45vw;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    main section:last-of-type {
+        grid-column: 1 / -1;
+    }
+}
