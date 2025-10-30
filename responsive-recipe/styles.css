@@ -96,16 +96,16 @@ ul ul, ol ol {
 @media (min-width: 768px) {
 body {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 40px 60px;
+    margin: 40px 0 40px 80px;
+    padding-right: 60px;
     background-color: #fff;
     color: #333;
   }
 
   header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     gap: 60px;
     margin-bottom: 50px;
   }
@@ -120,7 +120,7 @@ body {
   header h1 {
     font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: left;
   }
 
@@ -139,7 +139,7 @@ body {
     align-items: flex-start;
     gap: 20px;
     text-align: left;
-    padding-top: 60px;
+    padding-top: 0;
   }
 
   .info div {
@@ -153,6 +153,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     text-align: left;
+    justify-content: start;
   }
 
   .ingredients,
@@ -169,8 +170,9 @@ body {
 
   footer {
     margin-top: 60px;
-    text-align: center;
+    text-align: left;
     font-size: 0.9rem;
     color: #555;
+    padding-left: 5px;
   }
 }
