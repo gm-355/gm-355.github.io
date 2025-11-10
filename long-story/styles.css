@@ -29,7 +29,7 @@ main {
     url("pele2.avif");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center 18%;
   background-attachment: fixed;
 }
 
