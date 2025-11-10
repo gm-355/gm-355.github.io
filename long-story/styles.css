@@ -23,11 +23,14 @@ p {
 
 /* 6 sections = 600vh */
 main {
-    height: 600vh;
-    background-image: url("pele.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 25%;
+  height: 600vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("pele2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
 section {
