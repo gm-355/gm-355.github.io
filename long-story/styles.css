@@ -27,7 +27,7 @@ main {
     background-image: url("pele.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center 25%;
 }
 
 section {
