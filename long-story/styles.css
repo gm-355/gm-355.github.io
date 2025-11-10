@@ -42,7 +42,7 @@ section>.content {
     position: absolute;
     width: 42vw;
     top: 20vh;
-    right: 4vw;
+    left: 4vw;
 }
 
 section>.content>p {
