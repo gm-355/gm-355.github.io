@@ -21,9 +21,9 @@ p {
     margin: 0;
 }
 
-/* 6 sections = 600vh */
+/* 7 sections = 700vh */
 main {
-  height: 600vh;
+  height: 700vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url("pele2.avif");
