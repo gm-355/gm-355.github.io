@@ -77,3 +77,25 @@ section>.instructions {
     margin-left: -0.4rem;
     padding-left: 1rem;
 }
+
+#section1 .content {
+    left: 4vw;
+    right: auto;
+    text-align: left;
+}
+
+#section2 .content,
+#section3 .content,
+#section4 .content,
+#section5 .content,
+#section6 .content {
+    left: auto;
+    right: 4vw;
+    text-align: left;
+}
+
+#section1 .instructions {
+    left: 4vw;
+    right: auto;
+    text-align: left;
+}
