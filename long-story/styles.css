@@ -88,7 +88,8 @@ section>.instructions {
 #section3 .content,
 #section4 .content,
 #section5 .content,
-#section6 .content {
+#section6 .content,
+#section7 .content {
     left: auto;
     right: 4vw;
     text-align: left;
