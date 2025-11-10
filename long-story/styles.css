@@ -26,7 +26,7 @@ main {
   height: 600vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url("pele2.jpg");
+    url("pele2.avif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
