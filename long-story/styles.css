@@ -1,0 +1,78 @@
+/* Brazil World Cup Vertical Scroll */
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Titillium+Web:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Titillium Web", sans-serif;
+  color: #fff;
+}
+
+h1, h2, p {
+  padding: 0;
+  margin: 0;
+}
+
+/* 6 sections = 600vh */
+main {
+  height: 600vh;
+  background-image: url("../pele.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+}
+
+section > .content {
+  position: absolute;
+  width: 42vw;
+  top: 20vh;
+  right: 4vw;
+}
+
+section > .content > p {
+  font-size: 1.8rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+/* "Scroll down" instructions */
+section > .instructions {
+  position: absolute;
+  bottom: 2vh;
+  width: 42vw;
+  right: 4vw;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #fff;
+  padding-left: 1rem;
+  opacity: 0.8;
+}
+
+#section1 p,
+#section1 h1 {
+  text-transform: uppercase;
+}
+
+#section1 h1 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+  font-family: Limelight, serif;
+  margin-left: -0.4rem;
+  padding-left: 1rem;
+}
+
+#section6 p {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #000;
+}
