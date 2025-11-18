@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f2e9dc;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 2rem;
+}
+
+.placeholder {
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #555;
+    margin-top: 1rem;
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 0.8rem;
+}
