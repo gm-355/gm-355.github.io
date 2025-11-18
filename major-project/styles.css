@@ -2,39 +2,48 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #fafafa;
+    color: #333;
 }
 
 header {
-    background-color: #f2e9dc;
-    padding: 1rem;
+    background-color: #f3e7d9;
+    padding: 1rem 2rem;
 }
 
-h1 {
+header h1 {
     margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 0.5rem;
 }
 
 nav a {
     margin-right: 1rem;
     text-decoration: none;
     color: #333;
+    font-weight: 500;
 }
 
 main {
     padding: 2rem;
 }
 
-.placeholder {
-    background-color: #eee;
-    padding: 1rem;
-    border-radius: 8px;
-    color: #555;
+.placeholder-box {
     margin-top: 1rem;
+    background: #eeeeee;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #666;
 }
 
 footer {
     margin-top: 4rem;
+    background: #eee;
     padding: 1rem;
-    background-color: #f2f2f2;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    color: #555;
 }
