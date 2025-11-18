@@ -1,10 +1,10 @@
-/* HOME PAGE SPLIT */
+/* Home page split layout */
 .split-home {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     height: 100vh;
     display: flex;
-    font-family: Arial, sans-serif;
     overflow: hidden;
 }
 
@@ -13,7 +13,7 @@
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #0c4a8a;
+    background-color: #002776; 
     padding: 1rem 2rem;
     border-radius: 6px;
 }
@@ -24,27 +24,28 @@
     font-size: 2rem;
 }
 
-/* Split halves */
+/* Split layout setup */
 .split {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .left {
-    background-color: #8ad95c;
+    background-color: #009739; 
 }
 
 .right {
-    background-color: #f7d769; 
+    background-color: #FEDD00; 
 }
 
 .split-link {
     font-size: 3rem;
     text-decoration: none;
     font-weight: bold;
-    color: white;
+    color: #FFFFFF;
     letter-spacing: 2px;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -54,7 +55,8 @@
     opacity: 0.9;
 }
 
-/* INTERNAL PAGES */
+
+/* PAGES */
 body:not(.split-home) {
     font-family: Arial, sans-serif;
     margin: 0;
