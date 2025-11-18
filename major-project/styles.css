@@ -40,10 +40,19 @@ main {
 }
 
 footer {
-    margin-top: 4rem;
     background: #eee;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     font-size: 0.9rem;
     color: #555;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
