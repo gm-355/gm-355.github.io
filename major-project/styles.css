@@ -87,6 +87,15 @@
     padding-top: 0;  
 }
 
+/* similar background colors as the home page */
+.sweets-page {
+    background-color: #009739AA;   
+}
+
+.savory-page {
+    background-color: #FEDD00AA;
+}
+
 /* GRID LAYOUT FOR THE 5 RECIPE BLOCKS */
 
 .recipe-layout {
