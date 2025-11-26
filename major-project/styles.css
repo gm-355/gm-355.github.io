@@ -128,6 +128,11 @@
     object-fit: cover;
     border-radius: 20px;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover img {
+    transform: scale(1.04);
 }
 
 .recipe-title {
