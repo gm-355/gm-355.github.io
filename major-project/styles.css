@@ -226,9 +226,9 @@
     background-color: #F7DF4BAA;
 }
 
-footer {
-    margin-top: 40px;
-    font-size: 14px;
+.recipe-footer {
+    margin-top: 50px; 
     text-align: center;
-    opacity: 0.8;
+    font-size: 15px;
+    opacity: 0.9;
 }
