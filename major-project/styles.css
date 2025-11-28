@@ -165,21 +165,29 @@
     opacity: 0.7;
 }
 
-
 /* ---------------------------
    INTERNAL RECIPE PAGES
 --------------------------- */
 
 .recipe-page {
-    background: #ffffff;
-    font-family: Arial, sans-serif;
-    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .recipe-container {
+    flex: 1;
     max-width: 750px;
     margin: 0 auto;
     text-align: center;
+}
+
+.recipe-footer {
+    margin-top: auto; 
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.9;
+    padding-bottom: 20px; 
 }
 
 .recipe-name {
@@ -202,7 +210,6 @@
 
 .recipe-section {
     margin-top: 35px;
-    margin-bottom: 40px;
     text-align: left;
 }
 
@@ -219,16 +226,14 @@
 }
 
 .sweets-bg {
-    background-color: #009739AA;
+    background-color: #009739AA; 
 }
 
 .savory-bg {
-    background-color: #F7DF4BAA;
+    background-color: #F7DF4BAA; 
 }
 
-.recipe-footer {
-    margin-top: 50px; 
+.recipe-footer { 
     text-align: center;
-    font-size: 15px;
-    opacity: 0.9;
+    font-size: 14px;
 }
