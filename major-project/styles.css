@@ -198,7 +198,8 @@
 .recipe-main-img {
     width: 100%;
     max-width: 650px;
-    height: auto;
+    height: 430px; 
+    object-fit: cover;
     border-radius: 20px;
     margin-top: 20px;
 }
