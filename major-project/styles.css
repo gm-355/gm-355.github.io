@@ -79,17 +79,18 @@
 ---------------------------------------- */
 
 .internal-page {
-  min-height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* center the grid */
-    align-items: center; 
-    padding-top: 0;  
+    justify-content: center;
+    /* center the grid */
+    align-items: center;
+    padding-top: 0;
 }
 
 /* similar background colors as the home page */
 .sweets-page {
-    background-color: #009739AA;   
+    background-color: #009739AA;
 }
 
 .savory-page {
@@ -105,7 +106,7 @@
     column-gap: 40px;
     width: 100%;
     max-width: 1100px;
-    margin-top: 40px;  
+    margin-top: 40px;
     place-items: center;
 }
 
@@ -139,7 +140,7 @@
     margin-top: 10px;
     font-size: 20px;
     text-align: center;
-    color: #000; 
+    color: #000;
 }
 
 /* ---------------------------
@@ -201,6 +202,7 @@
 
 .recipe-section {
     margin-top: 35px;
+    margin-bottom: 40px;
     text-align: left;
 }
 
@@ -217,9 +219,16 @@
 }
 
 .sweets-bg {
-    background-color: #009739AA; 
+    background-color: #009739AA;
 }
 
 .savory-bg {
-    background-color: #F7DF4BAA; 
+    background-color: #F7DF4BAA;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.8;
 }
