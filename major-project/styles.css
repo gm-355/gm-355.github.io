@@ -88,7 +88,6 @@
     padding-top: 0;
 }
 
-/* similar background colors as the home page */
 .sweets-page {
     background-color: #009739;
 }
@@ -231,7 +230,7 @@
 }
 
 .savory-bg {
-    background-color: #F7DF4B; 
+    background-color: #FEDD00; 
 }
 
 .recipe-footer { 
