@@ -82,6 +82,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    /* center the grid */
     align-items: center;
     padding-top: 0;
 }
