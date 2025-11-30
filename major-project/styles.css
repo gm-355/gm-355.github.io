@@ -165,9 +165,9 @@
     opacity: 0.7;
 }
 
-/* ----------------
-     RECIPE PAGES
--------------------- */
+/* -----------------------
+     RECIPE INTERNAL PAGES
+----------------------------- */
 
 .recipe-page {
     display: flex;
@@ -210,11 +210,11 @@
     height: 430px; 
     object-fit: cover;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .recipe-info {
-    margin: 20px 0;
+    margin: 8px 0;
     font-size: 20px;
 }
 
