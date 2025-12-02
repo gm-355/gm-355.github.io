@@ -5,7 +5,6 @@
 .split-home {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     height: 100vh;
     display: flex;
     overflow: hidden;
@@ -26,6 +25,7 @@
     margin: 0;
     color: white;
     font-size: 2rem;
+    font-weight: 700
 }
 
 .split {
@@ -72,6 +72,7 @@
     color: white;
     line-height: 1.4;
     text-align: center;
+    font-weight: 500;
 }
 
 /* -------------------------------------
@@ -105,7 +106,7 @@
     column-gap: 40px;
     width: 100%;
     max-width: 1100px;
-    margin-top: 40px;
+    margin-top: 70px;
     place-items: center;
     padding-top: 50px;
 }
@@ -151,7 +152,7 @@
     position: absolute;
     top: 20px;
     left: 25px;
-    font-family: Arial, sans-serif;
+
 }
 
 .top-nav a {
@@ -165,9 +166,9 @@
     opacity: 0.7;
 }
 
-/* -----------------------
-     RECIPE INTERNAL PAGES
------------------------------ */
+/* ----------------
+     RECIPE PAGES
+-------------------- */
 
 .recipe-page {
     display: flex;
@@ -183,11 +184,11 @@
 }
 
 .recipe-footer {
-    margin-top: auto; 
+    margin-top: auto;
     text-align: center;
     font-size: 14px;
     opacity: 0.9;
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 }
 
 .recipe-name {
@@ -207,7 +208,7 @@
 .recipe-main-img {
     width: 100%;
     max-width: 650px;
-    height: 430px; 
+    height: 430px;
     object-fit: cover;
     border-radius: 5px;
     margin-top: 15px;
@@ -236,11 +237,11 @@
 }
 
 .sweets-bg {
-    background-color: #009739; 
+    background-color: #009739;
 }
 
 .savory-bg {
-    background-color: #FEDD00; 
+    background-color: #FEDD00;
 }
 
 /* --------------------
@@ -263,4 +264,11 @@
     font-weight: normal;
     opacity: 0.85;
     cursor: pointer;
+}
+
+/* ---------------
+   GOOGLE FONTS
+------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
 }
