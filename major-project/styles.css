@@ -271,6 +271,22 @@
 /* --------------
    GOOGLE FONTS
 ------------------ */
+
+/* whole website font */
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+/* Different font for Recipe title */
+.recipe-name {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Recipe subtitle + body text */
+.recipe-name-eng,
+.recipe-info,
+.recipe-section,
+.recipe-section h2,
+.recipe-section li {
+    font-family: 'Inter', sans-serif;
 }
