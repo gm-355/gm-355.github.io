@@ -1,6 +1,7 @@
-/* --------------------------
-   HOME PAGE (SPLIT LAYOUT)
------------------------------ */
+        
+        /* --------------------------
+            HOME PAGE (SPLIT LAYOUT)
+        ----------------------------- */
 
 .split-home {
     margin: 0;
@@ -10,7 +11,7 @@
     overflow: hidden;
 }
 
-/* blue title box */
+    /* blue title box */
 .title-box {
     position: absolute;
     top: 5%;
@@ -44,7 +45,7 @@
     background-color: #FEDD00;
 }
 
-/* main big links for sweets and savory */
+    /* main big links for sweets and savory */
 .split-link {
     font-size: 3rem;
     text-decoration: none;
@@ -75,16 +76,15 @@
     font-weight: 500;
 }
 
-/* -------------------------------------
-   INTERNAL PAGES FOR SWEETS + SAVORY
----------------------------------------- */
+        /* -------------------------------------
+            INTERNAL PAGES FOR SWEETS + SAVORY
+        ---------------------------------------- */
 
 .internal-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* center the grid */
     align-items: center;
     padding-top: 0;
 }
@@ -97,7 +97,7 @@
     background-color: #FEDD00;
 }
 
-/* GRID LAYOUT FOR THE 5 RECIPE BLOCKS */
+    /* GRID LAYOUT FOR THE 5 RECIPE BLOCKS */
 
 .recipe-layout {
     display: grid;
@@ -118,7 +118,10 @@
     gap: 80px;
 }
 
-/* RECIPE IMAGE */
+        /* ----------------
+            RECIPE IMAGE
+        ------------------- */
+
 .recipe-card {
     width: 320px;
     text-align: center;
@@ -146,14 +149,16 @@
     color: white;
 }
 
-/* ---------------------------
- TOP NAV FOR INTERNAL PAGES
------------------------------ */
-/* Added blue box for menu */
+        /* ---------------------------
+            TOP NAV FOR INTERNAL PAGES
+        -------------------------------- */
+
+    /* Added blue box for menu */
+
 .top-nav {
     position: absolute;
-    top: 20px;
-    left: 25px;
+    top: 15px;
+    left: 20px;
 
     background-color: #002776;
     padding: 0.4rem 1rem;
@@ -173,9 +178,9 @@
     opacity: 0.8;
 }
 
-/* ----------------
-     RECIPE PAGES
--------------------- */
+        /* ----------------
+            RECIPE PAGES
+        ------------------- */
 
 .recipe-page {
     display: flex;
@@ -251,9 +256,10 @@
     background-color: #FEDD00;
 }
 
-/* --------------------
-   RECIPE PAGE FOOTER
------------------------ */
+        /* --------------------
+            RECIPE PAGE FOOTER
+        ----------------------- */
+
 .page-footer {
     text-align: center;
     margin-top: 30px;
@@ -273,21 +279,21 @@
     cursor: pointer;
 }
 
-/* --------------
-   GOOGLE FONTS
------------------- */
+        /* ----------------
+            GOOGLE FONTS
+        ------------------- */
 
-/* whole website font */
+    /* Whole website font */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Different font for Recipe title */
+    /* Recipe title Font */
 .recipe-name {
     font-family: 'Playfair Display', serif;
 }
 
-/* Recipe subtitle + body text */
+    /* Recipe subtitle + body text */
 .recipe-name-eng,
 .recipe-info,
 .recipe-section,
