@@ -122,6 +122,8 @@
 .recipe-card {
     width: 320px;
     text-align: center;
+    text-decoration: none;
+    color: #000;
 }
 
 .recipe-card img {
