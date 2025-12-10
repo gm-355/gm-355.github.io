@@ -11,7 +11,77 @@
 	<!-- external and internal CSS -->
 	<link rel="stylesheet" href="styles.css" media="all">
 	<style>
-		/* in-file CSS here */
+		body {
+			margin: 0;
+			padding: 40px;
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+			display: flex;
+			justify-content: center;
+		}
+
+		.container {
+			width: 100%;
+			max-width: 1100px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 24px;
+		}
+
+		h1 {
+			grid-column: 1 / -1;
+			text-align: center;
+			font-size: 42px;
+			margin-bottom: 5px;
+		}
+
+		.subtitle {
+			grid-column: 1 / -1;
+			text-align: center;
+			font-size: 18px;
+			opacity: 0.75;
+			margin-bottom: 20px;
+		}
+
+		.card {
+			background-color: #ffffff;
+			padding: 22px;
+			border-radius: 12px;
+			text-align: center;
+		}
+
+		h2 {
+			font-size: 22px;
+			margin-top: 0;
+			margin-bottom: 12px;
+		}
+
+		ul {
+			margin: 0;
+			padding-left: 18px;
+			font-size: 16px;
+			list-style: none;
+			padding-left: 0;
+		}
+
+		li {
+			margin-bottom: 6px;
+		}
+
+		a {
+			color: #1a5cff;
+			text-decoration: underline;
+			font-weight: 500;
+		}
+
+		a:hover {
+			opacity: 0.7;
+		}
+
+		.major-project {
+			grid-column: 1 / -1;
+			text-align: center;
+		}
 	</style>
 
 
@@ -19,48 +89,52 @@
 
 <body>
 
-	<h1>Giovanna</h1>
-	<p>Data Analytics student with a minor in data visualization.</p>
+	<div class="container">
 
-	<p><a href="https://github.com/gm-355/gm-355.github.io">GitHub Repository</a></p>
+		<h1>Giovanna</h1>
+		<p class="subtitle">Data Analytics student with a minor in data visualization.</p>
 
-	<hr>
-
-	<h2>Activities</h2>
-	<ul>
-		<li><a href="codelogs/log1.html">Code log 1: HTML Semantic Tags</a></li>
-		<li><a href="codelogs/log2.html">Code log 2: CSS Measuring Units</a></li>
-		<li><a href="codelogs/log3.html">Code log 3: CSS Media Queries</a></li>
-		<li><a href="codelogs/log4.html">Code log 4: Colors</a></li>
-		<li><a href="codelogs/log5.html">Code log 5: Image</a></li>
-		<li><a href="codelogs/log6.html">Code log 6: Code Reference</a></li>
-	</ul>
-
-	<hr>
-
-	<h2>Tiny Projects</h2>
-	<ul>
-		<li><a href="/favorite-recipe/index.html">Tiny Project 2: Favorite Recipe</a></li>
-
-		<li>
-			Tiny Project 3: Design Quote Layout
+		<div class="card">
+			<h2>Activities</h2>
 			<ul>
-				<li><a href="/anni-albers/index.html">Website 1</a></li>
-				<li><a href="/anni-albers/index2.html">Website 2</a></li>
+				<li>Code log 1: <a href="codelogs/log1.html">HTML Semantic Tags</a></li>
+				<li>Code log 2: <a href="codelogs/log2.html">CSS Measuring Units</a></li>
+				<li>Code log 3: <a href="codelogs/log3.html">CSS Media Queries</a></li>
+				<li>Code log 4: <a href="codelogs/log4.html">Colors</a></li>
+				<li>Code log 5: <a href="codelogs/log5.html">Image</a></li>
+				<li>Code log 6: <a href="codelogs/log6.html">Code Reference</a></li>
 			</ul>
-		</li>
-		<li><a href="/Rhododendron/index.html">Tiny Project 4: Pacific Rhododendron</a></li>
-		<li><a href="/responsive-recipe/index.html">Tiny Project 6: Responsive Recipe</a></li>
-		<li><a href="/dark-flower/index.html">Tiny Project 8: Dark Flower</a></li>
-		<li><a href="/long-story/index.html">Tiny Project 9: A Long Story</a></li>
-	</ul>
+		</div>
 
-	<hr>
+		<div class="card">
+			<h2>Tiny Projects</h2>
+			<ul>
+				<li><a href="/favorite-recipe/index.html">Tiny Project 2: Favorite Recipe</a></li>
+				<li>
+					Tiny Project 3: Design Quote Layout
+					<ul>
+						<li><a href="/anni-albers/index.html">Website 1</a></li>
+						<li><a href="/anni-albers/index2.html">Website 2</a></li>
+					</ul>
+				</li>
+				<li><a href="/Rhododendron/index.html">Tiny Project 4: Pacific Rhododendron</a></li>
+				<li><a href="/responsive-recipe/index.html">Tiny Project 6: Responsive Recipe</a></li>
+				<li><a href="/dark-flower/index.html">Tiny Project 8: Dark Flower</a></li>
+				<li><a href="/long-story/index.html">Tiny Project 9: A Long Story</a></li>
+			</ul>
+		</div>
 
-	<h2>Major Project</h2>
-	<p>
-		A <a href="/major-project/">Brazilian recipe website</a> featuring some of my favorite sweets and savory dishes.
-	</p>
+		<div class="card major-project">
+			<h2>Major Project</h2>
+			<p>
+				A <a href="/major-project/">Brazilian recipe website</a> featuring some of my favorite sweets and savory
+				dishes.
+			</p>
+		</div>
+
+	</div>
+
 </body>
+
 
 </html>
