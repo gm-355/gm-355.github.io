@@ -1,1 +1,46 @@
+/* TP4 styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root {
+    --gameBoardSize: 90vw;
+    --gameBoardSpacer: 15px;
+}
+
+#gameBoard {
+    position: relative;
+    width: calc( var(--gameBoardSize) - var(--gameBoardSpacer) );
+    height: calc( var(--gameBoardSize) - var(--gameBoardSpacer) );
+    background-color: black;
+}
+
+.row {
+    position: relative;
+    float: left;
+    width: var(--gameBoardSize);
+    height: calc( ( var(--gameBoardSize) / 3 ) - var(--gameBoardSpacer) );
+    margin-bottom: var(--gameBoardSpacer);
+}
+
+.gameSpace {
+    float: left;
+    background-color: white;
+    width: calc( ( var(--gameBoardSize) / 3 ) - var(--gameBoardSpacer) );
+    height: calc( ( var(--gameBoardSize) / 3 ) - var(--gameBoardSpacer) );
+    margin-right: var(--gameBoardSpacer);
+    font-family: "Poppins", sans-serif;
+    font-size: 10rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    color: plum;
+}
+
+/* responsive design */
+@media (min-width: 768px) {
+    :root {
+        --gameBoardSize: 80vh;
+    }
+}
