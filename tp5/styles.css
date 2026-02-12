@@ -1,1 +1,148 @@
 
+    /* STYLES FOR CONCENTRATION BOARD - TP5 */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* board size and spacing */
+  --boardWidth: 100vw;
+  --boardGap: 3vw;
+  --cardSize: calc( ( var(--boardWidth) - var(--boardGap) ) / 2);
+}
+
+body {
+  margin: var(--boardGap) 0 0 0;
+  padding: 0;
+}
+
+
+    /* GENERAL CARD STYLING */
+
+.card {
+  position: relative;
+  width: var(--cardSize);
+  height: var(--cardSize);
+  perspective: 500px; /* it makes the flip look 3D */
+}
+
+.cardContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d; 
+}
+
+.card:hover .cardContent {
+  transform: rotateX(180deg); 
+}
+
+.cardTop,
+.cardBottom {
+  position: absolute; 
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border: 2px solid darkgoldenrod;
+  font-size: 42px;
+  backface-visibility: hidden;
+}
+
+.cardTop {
+  background-color: darkolivegreen;
+  color: #eee;
+}
+
+.cardBottom {
+  background-color: #eee;
+  color: darkblue;
+  transform: rotateX(180deg);
+}
+
+
+/* CSS PRE DEFINED CARD STYLES */
+
+.pair1 .cardBottom {
+  --s: 65px; /* control the size*/
+  --c1: #ecd078;
+  --c2: #542437;
+  
+  --l1:#0000  48%,var(--c1) 0 52%,#0000 0;
+  --l2:#0000 1.3%,var(--c2) 0 32%,#0000 0;
+  background:
+    linear-gradient(-45deg,var(--l2)),
+    linear-gradient( 45deg,var(--l1)),
+    linear-gradient( 45deg,var(--l2)) calc(var(--s)/2) calc(var(--s)/2),
+    linear-gradient(-45deg,var(--l1)) var(--c2);
+  background-size: calc(2*var(--s)) var(--s),var(--s) var(--s);
+}
+
+.pair2 .cardBottom {
+  --s: 52px; /* control the size*/
+  --c1: #dfba69;
+  --c2: #5a2e2e;
+  
+  --p:35%,#0000 calc(35% + 1px);
+  background:
+    radial-gradient(at 0 100%,var(--c1) var(--p)) var(--s) 0,
+    radial-gradient(at 0 100%,var(--c2) var(--p)) 0 var(--s),
+    repeating-conic-gradient(from 45deg,var(--c2) 0 25%,var(--c1) 0 50%);
+  background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+.pair3 .cardBottom {
+  --s: 70px; /* control the size*/
+  --c1: #6b5344;
+  --c2: #f8ecc9;
+  
+  --_l: #0000 46%,var(--c1) 47% 53%,#0000 54%;
+  background:
+    radial-gradient(100% 100% at 100% 100%,var(--_l)) var(--s) var(--s),
+    radial-gradient(100% 100% at 0    0   ,var(--_l)) var(--s) var(--s),
+    radial-gradient(100% 100%,#0000 22%,var(--c1) 23% 29%, #0000 30% 34%,var(--c1) 35% 41%,#0000 42%),
+    var(--c2);
+  background-size: calc(var(--s)*2) calc(var(--s)*2);
+}
+
+.pair4 .cardBottom {
+  --s: 40px; /* control the size*/
+  --c1: #ab3e5b;
+  --c2: #f9f2e7;
+  
+  --_g:#0000 17.5%,var(--c1) 18% 35%,var(--c2) 35.5% 39%,#0000 40%;
+  background:
+    radial-gradient(at 100% 0,var(--_g))
+     0       calc(var(--s)/-2)/calc(2*var(--s)) calc(2*var(--s)),
+    radial-gradient(at 0 100%,var(--_g))
+     calc(var(--s)/2) var(--s)/calc(2*var(--s)) calc(2*var(--s)),
+    conic-gradient(#0000 75%,var(--c1) 0) 0 0/var(--s) var(--s) 
+     var(--c2);
+}
+
+/* GAMEBOARD FORMATTING */
+
+#gameBoard {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: var(--boardGap);
+    width: var(--boardWidth);
+}
+
+@media screen and (orientation: landscape) {
+
+  :root {
+    --boardWidth: 80vw;  /* smaller board in landscape */
+    --cardSize: calc( ( var(--boardWidth) - (3 * var(--boardGap) ) ) / 4);
+  }
+
+  #gameBoard {
+    grid-template-columns: 1fr 1fr 1fr 1fr;  /* landscape layout: 4 columns */
+    grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+  }
+
+}
