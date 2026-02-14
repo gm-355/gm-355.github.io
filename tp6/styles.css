@@ -1,1 +1,146 @@
 
+    /* TP6 weather layout */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e6ebf0;
+}
+
+#app {
+    padding: 16px;
+}
+
+header {
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #2f3e4d;
+}
+
+#location {
+    margin: 6px 0 0 0;
+    color: #5c6b7a;
+}
+
+    /* CURRENT WEATHER BOX */
+
+#now {
+    background: #1e4f7a;
+    padding: 16px;
+    border: 1px solid #cfd6dd;
+}
+
+#tempNow {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+#conditionNow {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#conditionNow .icon {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+#details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.detailBox {
+    background: white;
+    padding: 12px;
+    border: 1px solid #cfd6dd;
+}
+
+.label {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6f7f8e;
+}
+
+.value {
+    margin: 6px 0 0 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2f3e4d;
+}
+
+#forecast {
+    background: white;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #cfd6dd;
+}
+
+#forecast h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #2f3e4d;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid #dde3ea;
+    background: #f7f9fb;
+    text-align: center;
+}
+
+.day p {
+    margin: 6px 0;
+}
+
+.dayName {
+    font-weight: bold;
+}
+
+.dayIcon {
+    font-size: 1.6rem;
+}
+
+    /* DESKTOP */
+
+@media (min-width: 800px) {
+    #app {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    #now {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #tempNow {
+        font-size: 4rem;
+    }
+
+    .days {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

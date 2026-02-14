@@ -1,1 +1,78 @@
 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Project 06: Layout for Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main id="app">
+
+        <header>
+            <h1>Weather App</h1>
+            <p id="location">New York, NY</p>
+        </header>
+
+        <section id="now">
+            <div id="tempNow">-3°C</div>
+
+            <div id="conditionNow">
+                <span class="icon" aria-hidden="true">☁️</span>
+                <span class="text">Cloudy</span>
+            </div>
+        </section>
+
+        <section id="details">
+            <div class="detailBox">
+                <p class="label">Wind</p>
+                <p class="value" id="windNow">10 km/h SW</p>
+            </div>
+
+            <div class="detailBox">
+                <p class="label">Humidity</p>
+                <p class="value" id="humidityNow">62%</p>
+            </div>
+        </section>
+
+        <section id="forecast">
+            <h2>Next 3 Days</h2>
+
+            <div class="days">
+
+                <div class="day">
+                    <p class="dayName">Sun</p>
+                    <p class="dayIcon" aria-hidden="true">☁️</p>
+                    <p class="dayCond">Cloudy</p>
+                    <p class="dayTemp">5°C / -3°C</p>
+                    <p class="dayWind">13 km/h</p>
+                </div>
+
+                <div class="day">
+                    <p class="dayName">Mon</p>
+                    <p class="dayIcon" aria-hidden="true">☁️☁️</p>
+                    <p class="dayCond">Mostly cloudy</p>
+                    <p class="dayTemp">4°C / -1°C</p>
+                    <p class="dayWind">16 km/h</p>
+                </div>
+
+                <div class="day">
+                    <p class="dayName">Tue</p>
+                    <p class="dayIcon" aria-hidden="true">☀️</p>
+                    <p class="dayCond">Mostly sunny</p>
+                    <p class="dayTemp">8°C / 1°C</p>
+                    <p class="dayWind">14 km/h</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
