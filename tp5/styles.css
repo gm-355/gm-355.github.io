@@ -8,7 +8,7 @@
 :root {
     /* board size and spacing */
   --boardWidth: 100vw;
-  --boardGap: 4vw;
+  --boardGap: 1.5vw;
   --cardSize: calc( ( var(--boardWidth) - (3 * var(--boardGap)) ) / 4);
 }
 
