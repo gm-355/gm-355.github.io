@@ -65,7 +65,7 @@ body {
 /* CSS PRE DEFINED CARD STYLES */
 
 .pair1 .cardBottom {
-  --s: 65px; /* control the size*/
+  --s: 65px;
   --c1: #ecd078;
   --c2: #542437;
   
@@ -80,7 +80,7 @@ body {
 }
 
 .pair2 .cardBottom {
-  --s: 52px; /* control the size*/
+  --s: 52px;
   --c1: #dfba69;
   --c2: #5a2e2e;
   
@@ -93,7 +93,7 @@ body {
 }
 
 .pair3 .cardBottom {
-  --s: 70px; /* control the size*/
+  --s: 70px;
   --c1: #6b5344;
   --c2: #f8ecc9;
   
@@ -107,7 +107,7 @@ body {
 }
 
 .pair4 .cardBottom {
-  --s: 40px; /* control the size*/
+  --s: 40px;
   --c1: #ab3e5b;
   --c2: #f9f2e7;
   
@@ -122,7 +122,7 @@ body {
 }
 
 .pair5 .cardBottom {
-  --s: 140px; /* control the size*/
+  --s: 140px;
   --c1: #170409;
   --c2: #67917a;
   
@@ -137,7 +137,7 @@ body {
 }
 
 .pair6 .cardBottom {
-  --s: 100px; /* control the size*/
+  --s: 100px;
   --c1: #336666;
   --c2: #ffffff;
   
@@ -150,7 +150,7 @@ body {
 }
 
 .pair7 .cardBottom {
-  --s: 120px; /* control the size*/
+  --s: 120px;
   --c1: #72e21f;
   --c2: #044012;
   
@@ -168,7 +168,7 @@ body {
 }
 
 .pair8 .cardBottom {
-  --s: 76px; /* control the size*/
+  --s: 76px;
   --c1: #f77825;
   --c2: #60b99a;
   --c3: #f1efa5;
