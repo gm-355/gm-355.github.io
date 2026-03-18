@@ -60,3 +60,69 @@ function checkGameboard(a, b, c) {
 
     return outcome;
 }
+
+function clickSquare() {
+
+    if ((this.innerHTML == "") && (gameOver == false)) {
+
+        // show current player's mark
+        this.innerHTML = currentTurn;
+        this.classList.add("clicked");
+
+        remainingTurns = remainingTurns - 1;
+
+        // update arrays
+        if (this.id == "a1") rowA[0] = currentTurn;
+        if (this.id == "a2") rowA[1] = currentTurn;
+        if (this.id == "a3") rowA[2] = currentTurn;
+
+        if (this.id == "b1") rowB[0] = currentTurn;
+        if (this.id == "b2") rowB[1] = currentTurn;
+        if (this.id == "b3") rowB[2] = currentTurn;
+
+        if (this.id == "c1") rowC[0] = currentTurn;
+        if (this.id == "c2") rowC[1] = currentTurn;
+        if (this.id == "c3") rowC[2] = currentTurn;
+
+        console.log(rowA);
+        console.log(rowB);
+        console.log(rowC);
+
+        // check board
+        let winState = checkGameboard(rowA, rowB, rowC);
+        let gameOutputMsg = document.querySelector("#gameResult");
+
+        if (winState == "x") {
+            gameOutputMsg.innerHTML = "X wins";
+            gameOver = true;
+        }
+        else if (winState == "o") {
+            gameOutputMsg.innerHTML = "O wins";
+            gameOver = true;
+        }
+        else if ((winState == "d") && (remainingTurns == 0)) {
+            gameOutputMsg.innerHTML = "Draw";
+            gameOver = true;
+        }
+
+        if (gameOver == false) {
+            if (currentTurn == "x") currentTurn = "o";
+            else currentTurn = "x";
+
+            currentPlayer.innerHTML = currentTurn;
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let allSpaces = document.querySelectorAll(".gameSpace");
+
+    for (let eachSpace of allSpaces) {
+        eachSpace.addEventListener("click", clickSquare);
+    }
+
+    // set current player display
+    currentPlayer = document.querySelector("#currentPlayer span");
+    currentPlayer.innerHTML = currentTurn;
+});
