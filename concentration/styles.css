@@ -52,7 +52,7 @@ h1 {
     width: var(--cardSize);
     height: var(--cardSize);
     perspective: 500px;
-    /* it makes the flip look 3D */
+    cursor: pointer;
 }
 
 .cardContent {
@@ -63,7 +63,7 @@ h1 {
     transform-style: preserve-3d;
 }
 
-.card:hover .cardContent {
+.card.flipped .cardContent {
     transform: rotateX(180deg);
 }
 
@@ -89,6 +89,11 @@ h1 {
     transform: rotateX(180deg);
 }
 
+/* matched cards disappear */
+.card.matched {
+    visibility: hidden;
+    pointer-events: none;
+}
 
 /* CSS PRE DEFINED CARD STYLES */
 
@@ -215,6 +220,7 @@ h1 {
     grid-template-rows: repeat(4, 1fr);
     gap: var(--boardGap);
     width: var(--boardWidth);
+    margin: 0 auto;
 }
 
 @media screen and (orientation: landscape) {
@@ -222,10 +228,6 @@ h1 {
     :root {
         --boardWidth: 80vw;
         --cardSize: calc((var(--boardWidth) - (3 * var(--boardGap))) / 4);
-    }
-
-    #gameBoard {
-        margin: 0 auto;
     }
 
 }
