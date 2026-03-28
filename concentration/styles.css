@@ -4,7 +4,7 @@
 
 :root {
     /* board size and spacing */
-    --boardWidth: 100vw;
+    --boardWidth: 85vw;
     --boardGap: 1.5vw;
     --cardSize: calc((var(--boardWidth) - (3 * var(--boardGap))) / 4);
 }
@@ -224,7 +224,7 @@ h1 {
 @media screen and (orientation: landscape) {
 
     :root {
-        --boardWidth: 80vw;
+        --boardWidth: 60vw;
         --cardSize: calc((var(--boardWidth) - (3 * var(--boardGap))) / 4);
     }
 
