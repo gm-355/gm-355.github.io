@@ -70,3 +70,30 @@ function flipCard() {
     // wait before checking match
     setTimeout(checkMatch, 800);
 }
+
+// checks if the two flipped cards match
+function checkMatch() {
+    if (getPairClass(firstCard) === getPairClass(secondCard)) {
+        firstCard.classList.add("matched");
+        secondCard.classList.add("matched");
+
+        matchedPairs++;
+        resetTurn();
+
+        // show message 
+        if (matchedPairs === 8) {
+            winPanel.classList.add("show");
+        }
+    } else {
+        firstCard.classList.remove("flipped");
+        secondCard.classList.remove("flipped");
+        resetTurn();
+    }
+}
+
+function resetTurn() {
+    firstCard = null;
+    secondCard = null;
+    boardLocked = false;
+}
+
