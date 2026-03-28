@@ -97,3 +97,10 @@ function resetTurn() {
     boardLocked = false;
 }
 
+function getPairClass(card) {
+    for (let i = 0; i < card.classList.length; i++) {
+        if (card.classList[i].startsWith("pair")) {
+            return card.classList[i];
+        }
+    }
+}
