@@ -30,3 +30,43 @@ function shuffleCards() {
     });
 }
 
+// add click event to each card
+cards.forEach(function(card) {
+    card.addEventListener("click", flipCard);
+});
+
+// flips one card
+function flipCard() {
+
+    if (boardLocked) {
+        return;
+    }
+
+    if (this.classList.contains("flipped")) {
+        return;
+    }
+
+    if (this.classList.contains("matched")) {
+        return;
+    }
+
+    // flip selected card
+    this.classList.add("flipped");
+
+    // save 1st card
+    if (firstCard === null) {
+        firstCard = this;
+        return;
+    }
+
+    // save 2nd card
+    secondCard = this;
+    boardLocked = true;
+
+    // one turn means one pair checked
+    turnCount++;
+    turnCountText.textContent = turnCount;
+
+    // wait before checking match
+    setTimeout(checkMatch, 800);
+}
