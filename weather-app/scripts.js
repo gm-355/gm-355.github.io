@@ -6,7 +6,7 @@ async function getData(url, options) {
             const result = await response.json();
             return result;
         } else {
-            throw(response.status);
+            throw (response.status);
         }
     } catch (error) {
         console.error(error);
@@ -26,7 +26,7 @@ let options = {
 };
 
 // get IP address and then get weather data
-getData(ipUrl).then(function(result) {
+getData(ipUrl).then(function (result) {
     console.log(result);
     getWeatherByIP(result.ip);
 });
@@ -35,7 +35,7 @@ getData(ipUrl).then(function(result) {
 function getWeatherByIP(userIP) {
     let weatherUrl = "https://weatherapi-com.p.rapidapi.com/forecast.json?q=" + userIP + "&days=3";
 
-    getData(weatherUrl, options).then(function(result) {
+    getData(weatherUrl, options).then(function (result) {
         console.log(result);
         updateCurrentWeather(result);
         updateForecast(result);
@@ -52,23 +52,29 @@ function updateCurrentWeather(result) {
     document.querySelector("#iconNow").src = "https:" + result.current.condition.icon;
 }
 
+function getDayName(dateString) {
+    let date = new Date(dateString);
+    let options = { weekday: "long" };
+    return date.toLocaleDateString("en-US", options);
+}
+
 // update forecast
 function updateForecast(result) {
     let forecastDays = result.forecast.forecastday;
 
-    document.querySelector("#day1Name").textContent = forecastDays[0].date;
+    document.querySelector("#day1Name").textContent = getDayName(forecastDays[0].date);
     document.querySelector("#day1Icon").src = "https:" + forecastDays[0].day.condition.icon;
     document.querySelector("#day1Cond").textContent = forecastDays[0].day.condition.text;
     document.querySelector("#day1Temp").textContent = forecastDays[0].day.maxtemp_c + "°C / " + forecastDays[0].day.mintemp_c + "°C";
     document.querySelector("#day1Wind").textContent = forecastDays[0].day.maxwind_kph + " km/h";
 
-    document.querySelector("#day2Name").textContent = forecastDays[1].date;
+    document.querySelector("#day2Name").textContent = getDayName(forecastDays[1].date);
     document.querySelector("#day2Icon").src = "https:" + forecastDays[1].day.condition.icon;
     document.querySelector("#day2Cond").textContent = forecastDays[1].day.condition.text;
     document.querySelector("#day2Temp").textContent = forecastDays[1].day.maxtemp_c + "°C / " + forecastDays[1].day.mintemp_c + "°C";
     document.querySelector("#day2Wind").textContent = forecastDays[1].day.maxwind_kph + " km/h";
 
-    document.querySelector("#day3Name").textContent = forecastDays[2].date;
+    document.querySelector("#day3Name").textContent = getDayName(forecastDays[2].date);
     document.querySelector("#day3Icon").src = "https:" + forecastDays[2].day.condition.icon;
     document.querySelector("#day3Cond").textContent = forecastDays[2].day.condition.text;
     document.querySelector("#day3Temp").textContent = forecastDays[2].day.maxtemp_c + "°C / " + forecastDays[2].day.mintemp_c + "°C";
@@ -82,7 +88,7 @@ let locationModal = document.querySelector("#locationModal");
 let locationForm = document.querySelector("#locationForm");
 
 // open modal
-openModalButton.addEventListener("click", function() {
+openModalButton.addEventListener("click", function () {
     modalBackground.style.display = "block";
     locationModal.style.display = "block";
 });
@@ -91,7 +97,7 @@ openModalButton.addEventListener("click", function() {
 function getWeatherByLocation(userLocation) {
     let weatherUrl = "https://weatherapi-com.p.rapidapi.com/forecast.json?q=" + userLocation + "&days=3";
 
-    getData(weatherUrl, options).then(function(result) {
+    getData(weatherUrl, options).then(function (result) {
         console.log(result);
         updateCurrentWeather(result);
         updateForecast(result);
@@ -99,7 +105,7 @@ function getWeatherByLocation(userLocation) {
 }
 
 // close modal and search new location
-locationForm.addEventListener("submit", function(event) {
+locationForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     let newLocation = document.querySelector("#newLocation").value;
