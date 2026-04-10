@@ -74,3 +74,22 @@ function updateForecast(result) {
     document.querySelector("#day3Temp").textContent = forecastDays[2].day.maxtemp_c + "°C / " + forecastDays[2].day.mintemp_c + "°C";
     document.querySelector("#day3Wind").textContent = forecastDays[2].day.maxwind_kph + " km/h";
 }
+
+// modal elements
+let openModalButton = document.querySelector("#openModal");
+let modalBackground = document.querySelector("#modalBackground");
+let locationModal = document.querySelector("#locationModal");
+let locationForm = document.querySelector("#locationForm");
+
+// open modal
+openModalButton.addEventListener("click", function() {
+    modalBackground.style.display = "block";
+    locationModal.style.display = "block";
+});
+
+// close modal
+locationForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    modalBackground.style.display = "none";
+    locationModal.style.display = "none";
+});
