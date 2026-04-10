@@ -13,14 +13,34 @@ async function getData(url, options) {
     }
 }
 
-// test sample data in console
-let url = "https://tordevries.github.io/477/examples/ajax-api-test/current-forecast.js";
+// get user's IP address
+let ipUrl = "https://api.ipify.org/?format=json";
 
-getData(url).then(function(result) {
+// RapidAPI options for weather API
+let options = {
+    method: "GET",
+    headers: {
+        "x-rapidapi-key": "abdc52e4f2msh71011d8b7815547p17a639jsn607c00941e6a",
+        "x-rapidapi-host": "weatherapi-com.p.rapidapi.com"
+    }
+};
+
+// get IP address and then get weather data
+getData(ipUrl).then(function(result) {
     console.log(result);
-    updateCurrentWeather(result);
-    updateForecast(result);
+    getWeatherByIP(result.ip);
 });
+
+// get live weather using IP
+function getWeatherByIP(userIP) {
+    let weatherUrl = "https://weatherapi-com.p.rapidapi.com/forecast.json?q=" + userIP + "&days=3";
+
+    getData(weatherUrl, options).then(function(result) {
+        console.log(result);
+        updateCurrentWeather(result);
+        updateForecast(result);
+    });
+}
 
 // update current weather section
 function updateCurrentWeather(result) {
