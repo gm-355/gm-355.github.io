@@ -20,7 +20,7 @@ let ipUrl = "https://api.ipify.org/?format=json";
 let options = {
     method: "GET",
     headers: {
-        "x-rapidapi-key": "abdc52e4f2msh71011d8b7815547p17a639jsn607c00941e6a",
+        "x-rapidapi-key": "dc9bd57ae8msh5d7ebf047442a31p14dd40jsn3d7971b6cee7",
         "x-rapidapi-host": "weatherapi-com.p.rapidapi.com"
     }
 };
@@ -87,9 +87,26 @@ openModalButton.addEventListener("click", function() {
     locationModal.style.display = "block";
 });
 
-// close modal
+// get weather using typed location
+function getWeatherByLocation(userLocation) {
+    let weatherUrl = "https://weatherapi-com.p.rapidapi.com/forecast.json?q=" + userLocation + "&days=3";
+
+    getData(weatherUrl, options).then(function(result) {
+        console.log(result);
+        updateCurrentWeather(result);
+        updateForecast(result);
+    });
+}
+
+// close modal and search new location
 locationForm.addEventListener("submit", function(event) {
     event.preventDefault();
+
+    let newLocation = document.querySelector("#newLocation").value;
+
+    getWeatherByLocation(newLocation);
+
     modalBackground.style.display = "none";
     locationModal.style.display = "none";
+    locationForm.reset();
 });
