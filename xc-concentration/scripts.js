@@ -47,7 +47,6 @@ let playerTwoScore = 0;
 // saved total wins from cookies
 let savedWins = {};
 
-// load cookie data when page opens
 loadSavedData();
 showSavedScores();
 
@@ -70,7 +69,6 @@ clearScoresButton.addEventListener("click", function() {
     showSavedScores();
 });
 
-// start a new game using the selected options
 function startGame() {
     totalPairs = Number(pairSelect.value);
     numberOfPlayers = Number(playerSelect.value);
@@ -123,7 +121,6 @@ function startGame() {
     createCards();
 }
 
-// creates cards based on the selected number of pairs
 function createCards() {
     gameBoard.innerHTML = "";
 
@@ -153,7 +150,6 @@ function createCards() {
     });
 }
 
-// randomizes the order of the cards
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let randomIndex = Math.floor(Math.random() * (i + 1));
@@ -164,7 +160,6 @@ function shuffleArray(array) {
     }
 }
 
-// flips one card
 function flipCard() {
     if (boardLocked) {
         return;
@@ -194,7 +189,6 @@ function flipCard() {
     setTimeout(checkMatch, 800);
 }
 
-// checks if the two flipped cards match
 function checkMatch() {
     if (getPairClass(firstCard) === getPairClass(secondCard)) {
         firstCard.classList.add("matched");
@@ -235,7 +229,6 @@ function addMatchScore() {
     }
 }
 
-// switches player after a wrong guess
 function switchPlayer() {
     if (currentPlayer === 1) {
         currentPlayer = 2;
@@ -246,7 +239,7 @@ function switchPlayer() {
     }
 }
 
-// ends the game and shows the final message
+// ends the game
 function endGame() {
     let winnerName = "";
 
