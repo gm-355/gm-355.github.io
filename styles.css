@@ -41,8 +41,9 @@ main {
 /* coursework section */
 #courseworkLinks {
   grid-column: 1 / -1;
-  background: transparent;
-  padding: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  padding: 20px;
 }
 
 #courseworkLinks h2 {
