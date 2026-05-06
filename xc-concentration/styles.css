@@ -28,19 +28,74 @@ h1 {
     color: #333;
 }
 
-#winPanel {
+.modal {
     display: none;
-    width: fit-content;
-    margin: 0 auto 15px auto;
-    padding: 12px 20px;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modalContent {
+    background-color: #f5f2ea;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    max-width: 90vw;
+    text-align: left;
+    color: #333;
+}
+
+.modalContent h2,
+.modalContent h3 {
+    text-align: center;
+    color: darkolivegreen;
+}
+
+.modalContent label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.modalContent select,
+.modalContent input,
+.modalContent button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.modalContent button {
     background-color: darkolivegreen;
     color: white;
-    border-radius: 8px;
-    font-size: 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#clearScoresButton {
+    background-color: #8a4b32;
+}
+
+#savedScores {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 6px;
 }
 
 #winPanel.show {
-    display: block;
+    display: flex;
 }
 
 /* GENERAL CARD STYLING */
@@ -209,13 +264,45 @@ h1 {
     background-size: calc(2*var(--s)) var(--s);
 }
 
+.pair9 .cardBottom {
+    background:
+        repeating-linear-gradient(45deg,
+            #7c4dff,
+            #7c4dff 10px,
+            #f5f2ea 10px,
+            #f5f2ea 20px);
+}
+
+.pair10 .cardBottom {
+    background:
+        radial-gradient(circle, #ffcc00 20%, transparent 21%),
+        #31572c;
+    background-size: 40px 40px;
+}
+
+.pair11 .cardBottom {
+    background:
+        linear-gradient(135deg, #e76f51 25%, transparent 25%),
+        linear-gradient(225deg, #e76f51 25%, transparent 25%),
+        linear-gradient(315deg, #e76f51 25%, transparent 25%),
+        linear-gradient(45deg, #e76f51 25%, transparent 25%);
+    background-color: #264653;
+    background-size: 50px 50px;
+}
+
+.pair12 .cardBottom {
+    background:
+        repeating-conic-gradient(from 0deg,
+            #2a9d8f 0deg 20deg,
+            #f4a261 20deg 40deg);
+}
+
 /* GAMEBOARD FORMATTING */
 
 #gameBoard {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     gap: var(--boardGap);
     width: var(--boardWidth);
     margin: 0 auto;
