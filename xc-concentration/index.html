@@ -18,132 +18,58 @@
 
 <body>
 
-<h1>Concentration</h1>
+    <h1>Concentration</h1>
+
+    <div id="startPanel" class="modal show">
+        <div class="modalContent">
+            <h2>Game Options</h2>
+
+            <label for="pairSelect">Number of pairs:</label>
+            <select id="pairSelect">
+                <option value="6">Easy: 6 pairs</option>
+                <option value="8" selected>Normal: 8 pairs</option>
+                <option value="12">Hard: 12 pairs</option>
+            </select>
+
+            <label for="playerSelect">Number of players:</label>
+            <select id="playerSelect">
+                <option value="1">1 Player</option>
+                <option value="2">2 Players</option>
+            </select>
+
+            <label for="playerOneName">Player 1 name:</label>
+            <input id="playerOneName" type="text" value="Player 1">
+
+            <label for="playerTwoName">Player 2 name:</label>
+            <input id="playerTwoName" type="text" value="Player 2">
+
+            <div id="savedScores">
+                <h3>Saved Wins</h3>
+                <p id="savedScoresText">No saved wins yet.</p>
+                <button id="clearScoresButton" type="button">Clear Saved Scores</button>
+            </div>
+
+            <button id="startButton" type="button">Start Game</button>
+        </div>
+    </div>
 
     <div id="gameInfo">
-        Turns: <span id="turnCount">0</span>
+        <p>Turns: <span id="turnCount">0</span></p>
+        <p id="currentPlayerLine">Current Player: <span id="currentPlayer">Player 1</span></p>
+        <p><span id="playerOneDisplay">Player 1</span>: <span id="playerOneScore">0</span> matches</p>
+        <p id="playerTwoLine"><span id="playerTwoDisplay">Player 2</span>: <span id="playerTwoScore">0</span> matches
+        </p>
     </div>
 
-    <div id="winPanel">You win!</div>
-
-    <div id="gameBoard">
-
-        <div class="card pair1">
-            <div class="cardContent">
-                <!-- front of the card -->
-                <div class="cardTop"></div> 
-                <!-- back of the card -->
-                <div class="cardBottom"></div>
-            </div>
+    <div id="winPanel" class="modal">
+        <div class="modalContent">
+            <h2 id="winMessage">You win!</h2>
+            <button id="playAgainButton" type="button">Play Again</button>
         </div>
-
-        <div class="card pair1">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair2">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair2">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair3">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair3">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair4">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair4">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-        
-        <div class="card pair5">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair5">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair6">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair6">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair7">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair7">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair8">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
-        <div class="card pair8">
-            <div class="cardContent">
-                <div class="cardTop"></div>
-                <div class="cardBottom"></div>
-            </div>
-        </div>
-
     </div>
-    
+
+    <div id="gameBoard"></div>
+
 </body>
 
 </html>
